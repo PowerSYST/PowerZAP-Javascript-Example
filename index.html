@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo - PowerSYST</title>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/vendor/intlTelInput/intlTelInput.css">
+  <script src="https://widget.powerzap.com.br/js/api.min.js?v=1.0.4" charset="utf-8"></script>
+  <script src="/vendor/jquery-2.2.2.min.js"></script>
+  <script src="/vendor/intlTelInput/intlTelInput.min.js"></script>
+
+</head>
+<body>
+  <div class="container" style="display: none;">
+
+    <section class="header">
+      <div class="user-info">
+        <div class="avatar" id="avatar"></div>
+
+        <div class="user-description">
+          <div class="user-status">
+            <h2 id="company-name"></h2>
+            <span id="status"></span>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="user-phone" id="user-phone"></a>
+    </section>
+
+    <section class="chat" id="changeContent">
+      <div class="modal">
+          <div class="modal-header">
+            <h3>Olá, Seja bem vindo!</h3>
+            <span>Escolha uma das opções abaixo para iniciarmos o seu atendimento</span>
+          </div>
+
+          <div class="options">
+            <a href="#" class="button chat-online" id="openFormChat">Falar com um atendente</a>
+            <a href="#" class="button call-me-on-whatsapp" id="openWhatsAppForm">Me chama no WhatsApp</a>
+          </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    var chat;
+    $(document).ready(function(){
+      chat = new PowerZAP_API({
+        hash    : "HASH_EMPRESA", //Diponível em seu painel
+        company : ID_EMPRESA //Diponível em seu painel
+      }, function(powerzap) {
+
+        document.querySelector(".container").style.display = "block";
+        ContentController(powerzap);
+
+      });
+    });
+  </script>
+</body>
+</html>
