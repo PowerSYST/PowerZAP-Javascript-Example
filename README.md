@@ -29,8 +29,8 @@ Para personalizar as páginas do site é preciso apenas que se altere os arquivo
 respectivos a cada uma delas.
 
 - **index.html** - Estrutura geral do site
-- **form-atendente.html** - Formulário para atendimento online
-- **form-whatsapp.html** - Forumalário para atendimento via WhatsApp
-- **chat-box.html** - Estrutura do Chat
+- **atendente.html** - Formulário para atendimento online
+- **whatsapp.html** - Forumalário para atendimento via WhatsApp
+- **box.html** - Estrutura do Chat
 - **satisfacao.html** - Formulário de feedback
 - **mensagem.html** - Mensagem padrão de sucesso
